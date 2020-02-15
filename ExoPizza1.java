@@ -15,7 +15,7 @@ public class ExoPizza1 {
 		for(int j = (int)Math.pow(2,h.length) ; j > 0 ; j--) {
 			rem = j - 1;
 			int sum = 0;
-			for(int i = 0; i < 4;i++) {
+			for(int i = 0; i < types;i++) {
 				sum += rem % 2 * h[i];	
 				if(sumMax < sum && sum <= max) {
 					sumMax = sum;
@@ -31,7 +31,7 @@ public class ExoPizza1 {
 		returnStr = sumMax + "\n";
 		rem = remFound;
 		
-		for(int i = 0; i < 4;i++) {
+		for(int i = 0; i < types;i++) {
 			if(rem % 2 == 1) {
 				returnStr += i + " ";
 			}
